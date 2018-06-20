@@ -3,7 +3,7 @@
         <form class="login-form">
             <input type="text" placeholder="Username" [(ngModel)]="username" name="username"/>
             <input type="password" placeholder="Password" [(ngModel)]="password" name="password"/>
-            <button type="submit">Login</button>
+            <button type="submit" (click)="login(username, password)">Login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
     </div>
