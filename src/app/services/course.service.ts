@@ -1,5 +1,5 @@
 export class CourseService {
-    URI = 'http://localhost:8080/api/courses';
+    URI = 'https://webdev-java-server.herokuapp.com/api/courses';
     
     findAllCourses() {
         return fetch(this.URI)
