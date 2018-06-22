@@ -15,9 +15,15 @@ export class TopicNavComponent implements OnInit {
             this.lessonId = params['lessonId'];
             this.getTopics();
         });
+        if (this.route.children.length > 0) {
+            this.route.children[0].params.subscribe(params => {
+                this.activeTopicId = params['topicId'];
+            });
+        }
     }
 
     lessonId;
+    activeTopicId;
     topics = [];
 
     ngOnInit() {
