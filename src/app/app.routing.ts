@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
+import { TopicNavComponent } from './topic-nav/topic-nav.component';
 
 const appRoutes: Routes = [
     {path: '', component: CourseGridComponent},
@@ -15,7 +16,16 @@ const appRoutes: Routes = [
         path: 'courses/:courseId',
         component: CourseViewerComponent,
         children: [
-            {path: 'modules/:moduleId', component: LessonTabsComponent}
+            {
+                path: 'modules/:moduleId',
+                component: LessonTabsComponent,
+                children: [
+                    {
+                        path: 'lessons/:lessonId',
+                        component: TopicNavComponent
+                    }
+                ]
+            }
         ]
     }
 ]

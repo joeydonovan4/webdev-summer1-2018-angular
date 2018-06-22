@@ -1,0 +1,7 @@
+<ul class="nav nav-tabs">
+    <li *ngFor="let topic of topics" class="nav-item">
+        <a class="nav-link" [ngClass]="{'active': topic.id == topicId}" routerLink="/courses/{{courseId}}/modules/{{moduleId}}/lessons/{{lessonId}}/topics/{{topic.id}}">
+        {{topic.title}}
+        </a>
+    </li>
+</ul>

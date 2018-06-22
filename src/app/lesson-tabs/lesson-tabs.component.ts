@@ -14,16 +14,18 @@ export class LessonTabsComponent implements OnInit {
         this.route.parent.params.subscribe(params => {
             this.courseId = params['courseId'];
         });
+        this.route.children[0].params.subscribe(params => {
+            this.activeLessonId = params['lessonId'];
+        });
         this.route.params.subscribe(params => {
             this.moduleId = params['moduleId'];
-            this.lessonId = params['lessonId'];
             this.getLessons();
         });
     }
 
     courseId;
     moduleId;
-    lessonId;
+    activeLessonId;
     lessons = [];
 
     ngOnInit() {
