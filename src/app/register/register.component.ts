@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from '../services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-    constructor(private userService: UserService) { }
+    constructor(private router: Router, private userService: UserService) { }
 
     firstName;
     lastName;
@@ -35,7 +36,7 @@ export class RegisterComponent implements OnInit {
                     });
                 } else {
                     response.json().then(createdUser => {
-                        console.log(createdUser);
+                        this.router.navigate(['profile']);
                     });
                 }
             });

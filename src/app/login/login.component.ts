@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
                     })
                 } else {
                     response.json().then(createdUser => {
-                        console.log('log in successful');
+                        this.router.navigate(['profile']);
                     });
                 }
             });
