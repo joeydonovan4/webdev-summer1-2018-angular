@@ -6,7 +6,8 @@
             <div class="card text-center">
                 <div class="card-body">
                     <h5 class="card-title">{{course.title}}</h5>
-                    <p class="card-text">Course Details</p>
+                    <a routerLink="/courses/{{course.id}}" class="btn btn-primary btn-block">Details</a>
+                    <a routerLink="/courses/{{course.id}}/sections" class="btn btn-primary btn-block">Enroll</a>
                 </div>
             </div>
         </div>
