@@ -3,14 +3,19 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { routing } from './app.routing';
 
+// Components
 import { AppComponent } from './app.component';
 import { CourseGridComponent } from './course-grid/course-grid.component';
 import { LoginComponent } from './login/login.component';
-import { CourseService } from './services/course.service';
-import { UserService } from './services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
+import { ModuleListComponent } from './module-list/module-list.component';
+
+// Services
+import { CourseService } from './services/course.service';
+import { UserService } from './services/user.service';
+import { ModuleService } from './services/module.service';
 
 @NgModule({
     declarations: [
@@ -19,7 +24,8 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
         LoginComponent,
         RegisterComponent,
         ProfileComponent,
-        CourseViewerComponent
+        CourseViewerComponent,
+        ModuleListComponent
     ],
     imports: [
         BrowserModule,
@@ -28,7 +34,8 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
     ],
     providers: [
         CourseService,
-        UserService
+        UserService,
+        ModuleService
     ],
     bootstrap: [AppComponent]
 })
