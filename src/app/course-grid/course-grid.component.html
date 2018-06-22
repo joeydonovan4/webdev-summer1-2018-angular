@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Courses ({{courses.length}})</h1>
+
+    <div class="card-deck">
+        <div *ngFor="let course of courses" class="col-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">{{course.title}}</h5>
+                    <p class="card-text">Course Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

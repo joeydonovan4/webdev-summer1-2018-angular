@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { CourseGridComponent } from './course-grid/course-grid.component';
 import { LoginComponent } from './login/login.component';
+import { CourseService } from './services/course.service';
 import { UserService } from './services/user.service';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -12,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 @NgModule({
     declarations: [
         AppComponent,
+        CourseGridComponent,
         LoginComponent,
         RegisterComponent,
         ProfileComponent
@@ -22,6 +25,7 @@ import { ProfileComponent } from './profile/profile.component';
         routing
     ],
     providers: [
+        CourseService,
         UserService
     ],
     bootstrap: [AppComponent]
