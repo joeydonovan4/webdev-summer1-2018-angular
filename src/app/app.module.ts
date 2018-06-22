@@ -11,11 +11,13 @@ import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { ModuleListComponent } from './module-list/module-list.component';
+import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 
 // Services
 import { CourseService } from './services/course.service';
 import { UserService } from './services/user.service';
 import { ModuleService } from './services/module.service';
+import { LessonService } from './services/lesson.service';
 
 @NgModule({
     declarations: [
@@ -25,7 +27,8 @@ import { ModuleService } from './services/module.service';
         RegisterComponent,
         ProfileComponent,
         CourseViewerComponent,
-        ModuleListComponent
+        ModuleListComponent,
+        LessonTabsComponent
     ],
     imports: [
         BrowserModule,
@@ -35,7 +38,8 @@ import { ModuleService } from './services/module.service';
     providers: [
         CourseService,
         UserService,
-        ModuleService
+        ModuleService,
+        LessonService
     ],
     bootstrap: [AppComponent]
 })

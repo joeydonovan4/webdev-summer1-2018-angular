@@ -11,16 +11,17 @@ export class ModuleListComponent implements OnInit {
 
     constructor(private service: ModuleService,
                 private route: ActivatedRoute) {
+        this.route.children[0].params.subscribe(params => {
+            this.activeModuleId = params['moduleId'];
+        });
         this.route.params.subscribe(params => {
             this.courseId = params['courseId'];
-            this.moduleId = params['moduleId'];
+            this.getModules();
         });
-
-        this.getModules();
     }
 
     courseId;
-    moduleId;
+    activeModuleId;
     modules = [];
 
     ngOnInit() {
