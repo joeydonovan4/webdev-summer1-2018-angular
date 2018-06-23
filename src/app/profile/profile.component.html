@@ -4,7 +4,7 @@
             <h1 class="display-4">Profile</h1>
         </div>
         <div class="col" *ngIf="admin">
-            <button class="btn btn-primary btn-block">Admin Page</button>
+            <a routerLink="/admin" *ngIf="admin" class="btn btn-primary btn-block">Admin Page</a>
         </div>
     </div>
     <hr class="my-4"/>

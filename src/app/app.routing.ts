@@ -7,12 +7,14 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { TopicNavComponent } from './topic-nav/topic-nav.component';
 import { WidgetListComponent } from './widget-list/widget-list.component';
+import { AdminComponent } from './admin/admin.component';
 
 const appRoutes: Routes = [
     {path: '', component: CourseGridComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'profile', component: ProfileComponent},
+    {path: 'admin', component: AdminComponent},
     {
         path: 'courses/:courseId',
         component: CourseViewerComponent,

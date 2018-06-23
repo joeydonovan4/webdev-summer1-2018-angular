@@ -14,6 +14,7 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { TopicNavComponent } from './topic-nav/topic-nav.component';
 import { WidgetListComponent } from './widget-list/widget-list.component';
+import { AdminComponent } from './admin/admin.component';
 
 // Services
 import { CourseService } from './services/course.service';
@@ -34,7 +35,8 @@ import { WidgetService } from './services/widget.service';
         ModuleListComponent,
         LessonTabsComponent,
         TopicNavComponent,
-        WidgetListComponent
+        WidgetListComponent,
+        AdminComponent
     ],
     imports: [
         BrowserModule,
