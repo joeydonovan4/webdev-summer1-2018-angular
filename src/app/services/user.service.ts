@@ -32,4 +32,10 @@ export class UserService {
             credentials: 'include'
         });
     }
+
+    logout() {
+        return fetch('http://localhost:4000/api/logout', {
+            credentials: 'include'
+        });
+    }
 }
